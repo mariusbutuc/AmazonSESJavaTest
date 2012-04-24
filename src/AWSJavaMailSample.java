@@ -50,10 +50,10 @@ public class AWSJavaMailSample {
      *            so that you can receive the initial confirmation email
      *            from Amazon Simple Email Service.
      */
-    private static final String TO = "nobody@nowhere.com";
-    private static final String FROM = "nobody@nowhere.com";
-    private static final String BODY = "Hello World!";
-    private static final String SUBJECT = "Hello World!";
+    private static final String TO = "mariusbutuc@gmail.com";
+    private static final String FROM = "admin@bigdatauniversity.com";
+    private static final String BODY = "Hey, did you know that this message was sent via Simple Email Service programmatically using AWS Java SDK.";
+    private static final String SUBJECT = "Straight from AWS SES";
 
     public static void main(String[] args) throws IOException {
         /*
@@ -65,6 +65,8 @@ public class AWSJavaMailSample {
                 AWSJavaMailSample.class
                         .getResourceAsStream("AwsCredentials.properties"));
         AmazonSimpleEmailService ses = new AmazonSimpleEmailServiceClient(credentials);
+				System.out.println(credentials.getAWSAccessKeyId());
+				System.out.println(credentials.getAWSSecretKey());
 
         /*
          * Before you can send email via Amazon SES, you need to verify that you
